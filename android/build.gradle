@@ -1,26 +1,27 @@
 buildscript {
     repositories {
+        google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.2.0'
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 27
+    buildToolsVersion "28.0.2"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
 
-        renderscriptTargetApi 23
+        renderscriptTargetApi 26
         renderscriptSupportModeEnabled true
     }
     lintOptions {
@@ -33,5 +34,5 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:[0.32,)'
+    implementation 'com.facebook.react:react-native:[0.32,)'
 }
